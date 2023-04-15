@@ -31,11 +31,20 @@ This project from CS 350 course will demonstrate the skills I have acquires in s
 
 
 ## Table of Content:
-**1. Professional Self-Assessment
-**2. Code Review
-**3. Software Design: Artifact 1
-**4. Algorithms and Data Structures: Artifact 2
-**5. Databases: Artifact 3
+
+**1. Professional Self-Assessment**
+
+
+**2. Code Review**
+
+
+**3. Software Design: Artifact 1**
+
+
+**4. Algorithms and Data Structures: Artifact 2**
+
+
+**5. Databases: Artifact 3**
 
 
 ## 1.	Professional Self-Assessment
