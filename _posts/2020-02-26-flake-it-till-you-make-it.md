@@ -4,6 +4,10 @@ title: Kateryna Burkova Portfolio Explanation
 subtitle: In this post I will discuss what to expect from this ePortfolio. 
 tags: [Software, test, thermostat, enchancement]
 ---
+
+You can see code review video here:
+https://youtu.be/quYp3-3zaTA
+
 Computer Science program started for me back in 2016. I went in local community college and received a Computer Science associates degree. Unfortunately while I was in school there was no help to find jobs and I had a little knowledge how to get in the field. I kept studying and was a straight A student, but still had no knowledge or idea of who I want to be. Then I decided to go for my graduate program in SNHU and after first semester I got a job in IT. This semester will be my last in Computer Science and I will start my journey to Cybersecurity.
 
 
