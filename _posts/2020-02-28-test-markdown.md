@@ -8,6 +8,64 @@ tags: [code, C++]
 comments: true
 ---
 
+**You can see code review video here: https://youtu.be/quYp3-3zaTA**
+
+
+## What is Computer Science for me?
+
+
+Computer Science program started for me back in 2016. I went in local community college and received a Computer Science associates degree. Unfortunately while I was in school there was no help to find jobs and I had a little knowledge how to get in the field. I kept studying and was a straight A student, but still had no knowledge or idea of who I want to be. Then I decided to go for my graduate program in SNHU and after first semester I got a job in IT. This semester will be my last in Computer Science and I will start my journey to Cybersecurity.
+
+
+During the program there was a lot of ups and downs. The three skills will be patience, asking questions, and reading the instructions. I named patience first because not everything will be working from the first try, and I needed to start over a project multiple times during this program. Asking questions is my go to, I will be posting questions to other students in general discussion, I will be emailing the professor if I need help at any time. Reading the instructions for the assignments through is a very important skill for me. I used to only read the requirements and then I found out that there is usually much more than requirements and I was missing a lot of things in some classes.
+
+
+## What is my ePortfolio?
+
+
+For my ePortfolio I am contemplating on which of the past work to display. The CS 350 course project will be used for ePortfolio. I used a code from scratch for TI CC3220x LAUNCHXL board. The program was written to create a thermostat by using GPIO, UART, I2C peripherals. This project has two artifacts from categories design and databases.
+
+
+This project from CS 350 course will demonstrate the skills I have acquires in software engineering and design because of the number of elements used, the structure of the code and analysis. Currently the application is able to set the temperature and to turn on/off the heating system. It is designed to add more features to the board. My plan for this artifact will be to enhance more functions to the project such as connect the device to the Wi-Fi. IoT device will collect data, then it will take the data by using the hub or IoT gateway to collate and transfer the data, and then it will analyze data and take further action by using user interface or aback end systems. This enhancement will illustrate software design and show future employees that I have experience working with IoT.
+
+
+
+## Table of Content:
+**1. Professional Self-Assessment
+**2. Code Review
+**3. Software Design: Artifact 1
+**4. Algorithms and Data Structures: Artifact 2
+**5. Databases: Artifact 3
+
+
+## 1.	Professional Self-Assessment
+For me, Computer Science has been a journey that started back in 2016 when I enrolled in a local community college and obtained an associates degree in Computer Science. However, I struggled to find employment in the field as there was little guidance on how to enter the industry. Despite this, I persevered and maintained a straight A record in my studies, although I still wasn't sure of my career aspirations. It was only after enrolling in a graduate program at SNHU that I landed a job in IT after just one semester. This semester will mark the end of my Computer Science studies, and I will be embarking on a new journey in Cybersecurity.
+Throughout my program, I learned the importance of patience, asking questions, and thoroughly reading instructions. Patience was especially critical as I often had to start projects from scratch multiple times. Whenever I needed help, I didn't hesitate to ask my peers or professors by posting questions in general discussions or emailing them directly. Additionally, I realized that reading assignment requirements alone wasn't enough, and I had to be diligent in reviewing all the instructions thoroughly to avoid missing any critical details.
+Regarding my ePortfolio, I am still deciding which of my past work to display. However, I am leaning towards showcasing my CS 350 course project. It involved coding a thermostat for a TI CC3220x LAUNCHXL board by utilizing GPIO, UART, and I2C peripherals, resulting in two artifacts from the design and databases categories.
+This project will illustrate my skills in software engineering and design as it required a complex structure and analysis. Currently, the application can adjust temperature and turn the heating system on and off. I plan to add more functions to the board, such as connecting it to Wi-Fi. This enhancement will demonstrate my experience with IoT and software design while showcasing to potential employers my ability to work with emerging technologies.
+
+## 2. Code Review
+
+**You can see code review video here: https://youtu.be/quYp3-3zaTA**
+
+Code review is an essential tool in software engineering. According to a 2022 Global DevSecOps Survey conducted by GitLab, 76% of developers stated that code reviews are "very valuable" (GitLab, 2022). Code review is typically conducted before the code is merged into the main codebase or released to production. It can be done manually, where a reviewer examines the code changes line-by-line, or using automated tools that can flag potential issues automatically. Once the developer has completed writing the code, it must undergo a code review to ensure that there are no logic problems, bugs, errors, or other issues.
+
+
+Code review is an essential practice for computer science professionals. The first reason is that it allows for the identification and correction of errors, bugs, and logic problems in the code. Catching these issues early on can help to avoid problems in production. The second reason is that code quality is improved, making the code easier to maintain and update. The third reason is the opportunity for collaboration with other team members. According to a GitLab survey, "When software developers review code as soon as a team member makes changes, they can learn new techniques and solutions" (GitLab, 2022). Code review provides an opportunity for team members to learn from each other and improve their skills. The fourth reason is the security of the code. Code review can reveal code vulnerabilities and provide developers with ideas on how to secure the code in the future. This is especially important for applications and systems that handle sensitive data or perform critical functions.
+
+
+There is a wide range of practices for code review, but I want to highlight five that I believe are the most valuable for developers. The first code review practice is to set clear objectives. It is important to outline specific issues and set objectives for the code. The second practice is to create a checklist of important aspects to cover during the review process. According to Usman Ghani's article on Atlassian, this checklist should include factors such as readability, security, test coverage, architecture, and reusability (Ghani, 2021). The third practice is to consider non-technical factors. During the review, we should not only focus on the technical aspects of the code but also consider non-technical factors such as user experience, performance, and scalability. The fourth practice I want to emphasize is prioritizing the code review. Code review should be viewed as an essential part of the development process and prioritized accordingly. It should not be seen as an optional or expendable step. The fifth code review practice is to utilize automated tools, which can help reduce the time and effort required for manual code review.
+
+
+One code review practice that I believe is not very common is to include end-users in the review process. End-users can provide valuable feedback on the usability and functionality of the code. Incorporating end-users in the code review process can help ensure that the code meets the needs of its intended audience. It can also lead to the discovery of new use cases and requirements that may not have been considered by the development team (Makarychev et al., 2016).
+### References:
+
+{: .box-note}
+**Note:** What is a code review? GitLab. (n.d.). Retrieved March 11, 2023, from https://about.gitlab.com/topics/version-control/what-is-code-review/#:~:text=Code%20reviews%2C%20also%20known%20as,developers%20learn%20the%20source%20code. 
+Ghani, U. (2022, February 3). 5 code review best practices. Work Life by Atlassian. Retrieved March 11, 2023, from https://www.atlassian.com/blog/add-ons/code-review-best-practices 
+Makarychev, K., Volokh, K., & Yermakov, S. (2016). Involving end-users in code review. In Proceedings of the 10th International Conference on Software Engineering and Applications (pp. 11-16).
+
+
 **Sowftware design, Algorithm and Data Structures, Database**
 
 
