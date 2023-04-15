@@ -1,5 +1,5 @@
 ---
-layout: Introduction to enchancemnts of thermostat project
+layout: post
 title: Portfolio Explanation
 subtitle: In this post I will discuss what to expect from this ePortfolio. 
 tags: [Software, test, thermostat, enchancement]
