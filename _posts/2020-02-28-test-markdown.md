@@ -70,7 +70,7 @@ One code review practice that I believe is not very common is to include end-use
 ### References:
 
 {: .box-note}
-**Note:** What is a code review? GitLab. (n.d.). Retrieved March 11, 2023, from https://about.gitlab.com/topics/version-control/what-is-code-review/#:~:text=Code%20reviews%2C%20also%20known%20as,developers%20learn%20the%20source%20code. 
+**References:** What is a code review? GitLab. (n.d.). Retrieved March 11, 2023, from https://about.gitlab.com/topics/version-control/what-is-code-review/#:~:text=Code%20reviews%2C%20also%20known%20as,developers%20learn%20the%20source%20code. 
 Ghani, U. (2022, February 3). 5 code review best practices. Work Life by Atlassian. Retrieved March 11, 2023, from https://www.atlassian.com/blog/add-ons/code-review-best-practices 
 Makarychev, K., Volokh, K., & Yermakov, S. (2016). Involving end-users in code review. In Proceedings of the 10th International Conference on Software Engineering and Applications (pp. 11-16).
 
