@@ -75,10 +75,10 @@ Ghani, U. (2022, February 3). 5 code review best practices. Work Life by Atlassi
 Makarychev, K., Volokh, K., & Yermakov, S. (2016). Involving end-users in code review. In Proceedings of the 10th International Conference on Software Engineering and Applications (pp. 11-16).
 
 
-**Sowftware design, Algorithm and Data Structures, Database**
+## Sowftware design, Algorithm and Data Structures, Database
 
 
-In here we will view 3 main artifacts and enhancements for this project.
+In here we will view **3 main artifacts and enhancements** for this project.
 
 
 ## 1. Sowftware design
