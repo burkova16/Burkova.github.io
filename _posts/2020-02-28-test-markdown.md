@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Sample blog post
-subtitle: Each post also has a subtitle
+title: Explanation of the code
+subtitle: Here I will discuss end explain the code
 gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-tags: [test]
+gh-badge: [star, explanation, follow]
+tags: [code, C++]
 comments: true
 ---
 
