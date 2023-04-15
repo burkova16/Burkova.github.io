@@ -8,7 +8,6 @@ tags: [code, C++]
 comments: true
 ---
 
-**You can see code review video here: https://youtu.be/quYp3-3zaTA**
 
 
 ## What is Computer Science for me?
@@ -55,7 +54,7 @@ This project will illustrate my skills in software engineering and design as it 
 
 ## 2. Code Review
 
-**You can see code review video here: https://youtu.be/quYp3-3zaTA**
+**You can see code review video here: https://youtu.be/zfEKqLCxUlk**
 
 Code review is an essential tool in software engineering. According to a 2022 Global DevSecOps Survey conducted by GitLab, 76% of developers stated that code reviews are "very valuable" (GitLab, 2022). Code review is typically conducted before the code is merged into the main codebase or released to production. It can be done manually, where a reviewer examines the code changes line-by-line, or using automated tools that can flag potential issues automatically. Once the developer has completed writing the code, it must undergo a code review to ensure that there are no logic problems, bugs, errors, or other issues.
 
