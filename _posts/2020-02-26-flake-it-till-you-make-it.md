@@ -1,17 +1,21 @@
 ---
 layout: post
-title: Flake it till you make it
+title: Kateryna Burkova Portfolio
 subtitle: Excerpt from Soulshaping by Jeff Brown
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
-tags: [books, test]
+cover-img: /assets/img/title.png
+thumbnail-img: /assets/img/title.png
+share-img: /assets/img/title.png
+tags: [Software, test]
 ---
+Computer Science program started for me back in 2016. I went in local community college and received a Computer Science associates degree. Unfortunately while I was in school there was no help to find jobs and I had a little knowledge how to get in the field. I kept studying and was a straight A student, but still had no knowledge or idea of who I want to be. Then I decided to go for my graduate program in SNHU and after first semester I got a job in IT. This semester will be my last in Computer Science and I will start my journey to Cybersecurity.
 
-Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?
 
-The truth is that no one else can definitively know the path we are here to walk. It’s tempting to listen—many of us long for the omnipotent other—but unless they are genuine psychic intuitives, they can’t know. All others can know is their own truth, and if they’ve actually done the work to excavate it, they will have the good sense to know that they cannot genuinely know anyone else’s. Only soul knows the path it is here to walk. Since you are the only one living in your temple, only you can know its scriptures and interpretive structure.
+During the program there was a lot of ups and downs. The three skills will be patience, asking questions, and reading the instructions. I named patience first because not everything will be working from the first try, and I needed to start over a project multiple times during this program. Asking questions is my go to, I will be posting questions to other students in general discussion, I will be emailing the professor if I need help at any time. Reading the instructions for the assignments through is a very important skill for me. I used to only read the requirements and then I found out that there is usually much more than requirements and I was missing a lot of things in some classes.
 
-At the heart of the struggle are two very different ideas of success—survival-driven and soul-driven. For survivalists, success is security, pragmatism, power over others. Success is the absence of material suffering, the nourishing of the soul be damned. It is an odd and ironic thing that most of the material power in our world often resides in the hands of younger souls. Still working in the egoic and material realms, they love the sensations of power and focus most of their energy on accumulation. Older souls tend not to be as materially driven. They have already played the worldly game in previous lives and they search for more subtle shades of meaning in this one—authentication rather than accumulation. They are often ignored by the culture at large, although they really are the truest warriors.
 
-A soulful notion of success rests on the actualization of our innate image. Success is simply the completion of a soul step, however unsightly it may be. We have finished what we started when the lesson is learned. What a fear-based culture calls a wonderful opportunity may be fruitless and misguided for the soul. Staying in a passionless relationship may satisfy our need for comfort, but it may stifle the soul. Becoming a famous lawyer is only worthwhile if the soul demands it. It is an essential failure if you are called to be a monastic this time around. If you need to explore and abandon ten careers in order to stretch your soul toward its innate image, then so be it. Flake it till you make it.
+For my ePortfolio I am contemplating on which of the past work to display. The CS 350 course project will be used for ePortfolio. I used a code from scratch for TI CC3220x LAUNCHXL board. The program was written to create a thermostat by using GPIO, UART, I2C peripherals. This project has two artifacts from categories design and databases. 
+
+
+This project from CS 350 course will demonstrate the skills I have acquires in software engineering and design because of the number of elements used, the structure of the code and analysis. Currently the application is able to set the temperature and to turn on/off the heating system. It is designed to add more features to the board. My plan for this artifact will be to enhance more functions to the project such as connect the device to the Wi-Fi. IoT device will collect data, then it will take the data by using the hub or IoT gateway to collate and transfer the data, and then it will analyze data and take further action by using user interface or aback end systems. This enhancement will illustrate software design and show future employees that I have experience working with IoT. 
+
+
