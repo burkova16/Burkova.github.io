@@ -172,6 +172,10 @@ Finally, the program will close the database connection.
 Overall, this pseudocode outlines the basic steps needed to add a MySQL database to the thermostat project for better data management and analysis.
 ~~~
 
+
+
+Here is an example of enchanced code in the .c file
+
 ```
 void *mainThread(void *arg0)
 {
