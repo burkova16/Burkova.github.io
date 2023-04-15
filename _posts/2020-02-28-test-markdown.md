@@ -83,6 +83,30 @@ And here is the enchanced code:
 
 ```
 
+Breaking down the code:
+
+
+1.	Initialize variables:
+•	This block initializes the variables total_energy_saved, current_energy_consumption, and target_energy_consumption to their initial values.
+
+
+2.	Loop until target energy consumption is reached:
+•	This block starts a loop that will continue until the current energy consumption is less than or equal to the target energy consumption. This means that the loop will keep running until the desired energy savings have been achieved.
+
+
+3.	Check if any devices can be turned off:
+•	This block checks to see if there are any devices that can be turned off to save energy. If there are devices that can be turned off, the code will execute the turn_off_device function, which will turn off the device and update the variables total_energy_saved and current_energy_consumption accordingly.
+
+
+4.	No devices can be turned off:
+•	If there are no devices that can be turned off, the code will execute the reduce_device_power_consumption function, which will reduce the power consumption of the devices in some other way. For example, it could reduce the brightness of lights or the power of a fan. After reducing the power consumption, the code updates the current_energy_consumption variable.
+
+
+5.	Print energy saved and return:
+•	This block prints the total amount of energy saved and then returns from the function. The total energy saved is stored in the total_energy_saved variable.
+
+
+
 ##  2. Algorithm and Data Structures
 ##  3. Database
 
