@@ -74,13 +74,13 @@ Ghani, U. (2022, February 3). 5 code review best practices. Work Life by Atlassi
 Makarychev, K., Volokh, K., & Yermakov, S. (2016). Involving end-users in code review. In Proceedings of the 10th International Conference on Software Engineering and Applications (pp. 11-16).
 
 
-## Sowftware design, Algorithm and Data Structures, Database
+## Software design, Algorithms and Data Structures, Database
 
 
 In here we will view **3 main artifacts and enhancements** for this project.
 
 
-## 1. Sowftware design
+## 1. Software design
 
 By utilizing a variety of elements, coding structure, and analysis, this CS 350 project showcases my software engineering and design skills. Currently, the program can set the temperature and activating/deactivating the heating system. However, the goal is to expand the project's capabilities by integrating it with Wi-Fi and incorporating an IoT device to collect and transfer data via a hub or IoT gateway for further analysis and action through either a user interface or backend system. 
 
@@ -96,6 +96,8 @@ By utilizing a variety of elements, coding structure, and analysis, this CS 350 
   
   I faced some challenges during this process. Adding Wi-Fi functionality to a thermostat requires the use of external hardware components, such as a Wi-Fi module or chip, and appropriate software libraries that support wireless communication. C++ code can be used to interface with these hardware components and implement the necessary protocols for sending and receiving data over Wi-Fi.
 
+
+Below is the pseudocode enhancement to demonstrate the ability to visualize code:
 
 
 ~~~
@@ -122,8 +124,60 @@ Repeat from Read temperature and humidity step
 End
 ~~~
 
+The enhancement in C++ file.
 
-##  2. Algorithm and Data Structures
+```
+
+// WI-FI enhancement
+#include <ESP8266WiFi.h>
+
+// SSID and password of the WiFi network
+const char* ssid = "MyWiFiNetwork";
+const char* password = "MyWiFiPassword";
+
+// Connect to the WiFi network
+WiFi.begin(ssid, password);
+while (WiFi.status() != WL_CONNECTED) {
+    delay(1000); // Wait for the WiFi to connect
+    Serial.println("Connecting to WiFi..."); // Print status message to serial monitor
+}
+Serial.println("Connected to WiFi"); // WiFi connection successful message
+
+// Send temperature data to a server
+float temperature = 20.5;
+WiFiClient client;
+if (client.connect("example.com", 80)) { // Connect to server on port 80
+    client.println("POST /updateTemperature HTTP/1.1"); // Send HTTP POST request
+    client.println("Host: example.com"); // Specify the host name
+    client.print("Temperature: "); // Send temperature data
+    client.print(temperature);
+    client.println();
+    client.println("Connection: close"); // Close the connection
+    client.println();
+    Serial.println("Temperature sent to server"); // Print status message to serial monitor
+}
+
+void loop() {
+
+    // Check if the WiFi connection is lost, then reconnect
+    if (WiFi.status() != WL_CONNECTED) {
+        Serial.println("WiFi connection lost, reconnecting..."); // Print status message to serial monitor
+        WiFi.reconnect();
+    }
+
+    // Enum state and timer handle
+    enum State { DOT, DASH, PAUSE_BETWEEN_CHARACTERS, PAUSE_BETWEEN_WORDS, SOS };
+    enum State currentState = DOT; // Initial state
+    int sosCount = 0; // Initial count for SOS
+    Timer_Handle timer0; // Initialize timer handle
+}
+```
+
+
+The code establishes a Wi-Fi connection using the ESP8266WiFi library and attempts to connect to a server on port 80 to send temperature data. The loop() function checks if the Wi-Fi connection is lost and reconnects if necessary. The remaining code related to the enum state and timer handle appears to be incomplete and without purpose.
+
+
+##  2. Algorithms and Data Structures
 
 
   The current thermostat project makes use of algorithms and data structures. The program currently uses a temperature control algorithm, as a thermostat needs to maintain the temperature of a room within a specified range. An algorithm can be used to control the heating and cooling systems to achieve this goal. The algorithm might use a simple proportional-integral-derivative (PID) controller or a more sophisticated model-predictive control (MPC) algorithm, depending on the specific requirements of the application. 
@@ -140,8 +194,10 @@ End
   
   I have learned that pseudocode is very helpful for this project. Pseudocode can be written in plain English or any other natural language, making it easy to read and understand for people without technical programming knowledge. This can help ensure that the program's logic and functionality are clear to all stakeholders involved in the development process. One of the challenges I faced was testing. Since I only have one thermostat and no special rooms to switch temperatures, it was not convenient to keep testing in the same room.
 
+Pseudocode is a high-level description of a computer program that is similar to a programming language, but more simplified and easier to understand. It is used to outline the structure and logic of a program before the actual coding process begins. This helps programmers to plan and design the program more effectively, allowing them to identify and address any potential issues before the code is written. In the below example you can see the pseudocode enhancement.
+
+
 ~~~
-pseudocode for the energy-saving algorithm
 // Initialize variables
     total_energy_saved = 0
     current_energy_consumption = get_current_energy_consumption()
@@ -188,63 +244,9 @@ Breaking down the code:
 5.	Print energy saved and return:
 •	This block prints the total amount of energy saved and then returns from the function. The total energy saved is stored in the total_energy_saved variable.
 
-```c++
-// Initialize variables
-    total_energy_saved = 0
-    current_energy_consumption = get_current_energy_consumption()
-    target_energy_consumption = get_target_energy_consumption()
-    // Loop until target energy consumption is reached
-    while current_energy_consumption > target_energy_consumption:
-        // Check if any devices can be turned off
-        device_to_turn_off = find_device_to_turn_off()
-        if device_to_turn_off is not None:
-            turn_off_device(device_to_turn_off)
-            energy_saved = get_energy_saved(device_to_turn_off)
-            total_energy_saved += energy_saved
-            current_energy_consumption -= energy_saved
-        else:
-            // No devices can be turned off, so reduce their power consumption
-            reduce_device_power_consumption()
-            current_energy_consumption = get_current_energy_consumption()
-    
-    // Print energy saved and return
-    print("Total energy saved: ", total_energy_saved)
-    return
+The code is an energy-saving algorithm that aims to reduce the energy consumption of a system by either turning off devices or reducing their power consumption. The program initializes variables for current and target energy consumption, as well as the total energy saved. It then enters a while loop and checks whether any devices can be turned off. If so, it turns off the first device it finds, calculates the amount of energy saved, and updates the relevant variables. If no devices can be turned off, it reduces the power consumption of all devices and updates the current_energy_consumption variable. Once current_energy_consumption is less than or equal to target_energy_consumption, the loop ends, and the program has successfully reduced the system's energy consumption. The total energy saved is stored in the total_energy_saved variable.The code in C++:
 
 ```
-
-
-##  3. Database
-
-
-The thermostat has memory, but it does not include a database. The plan is to enhance the project by adding a MySQL database. The original design does not include many libraries, so additional libraries will be required to save data to the database. The temperature and humidity readings from the thermostat can be stored in a structured way in a MySQL database, with columns for the timestamp, temperature, and humidity readings. This data can be used for various purposes, such as generating charts and reports, detecting anomalies, and analyzing trends over time. This enhancement will improve data management, increase functionality, and improve the user experience.
-
-
-Adding SQL database to this project will showcase my skills in data management, integration, scalability, and reliability. By adding a MySQL database, I am showcasing the ability to manage data in a structured and efficient way. I will be showing that I can create tables, insert data, and retrieve data from a database using SQL statements. Integrating a MySQL database into a project requires knowledge of various technologies, such as database management systems, APIs, and programming languages. This demonstrates the ability to work with different technologies and integrate them seamlessly into a project. A database will allow to store large amounts of data and scale the application as it grows. I will be showing an ability to design and develop applications that can handle large amounts of data and scale as needed. One of the ways to improve the enhancement is adding security level to it. This involves implementing user authentication, access control, and encryption. This helps to protect the data from unauthorized access and ensure data privacy and confidentiality.
-
-
-I have achieved the course objectives that were my goal. The updates to the outcome-coverage plans include data storage management, analytics and reporting, and integration with other systems. Since the thermostat generates a large amount of data, such as temperature and humidity readings, it is necessary to store and manage that data in a database. A database can provide a structured and organized way to store and retrieve data, making it easier to manage and analyze. With the addition of a database, complex queries and analytics can now be performed on the data, allowing for insights to be gained from it.
-
-
-One of the main things I have learned is the use of libraries for MySQL. The MySQL C++ library provides a high-level interface for connecting to the database, executing queries, and retrieving data. One difficulty that I have encountered is that storing sensitive data, such as temperature and humidity readings, in a database can raise security concerns. It is important to implement appropriate security measures, such as user authentication and access control, to ensure that the data is protected. I have learned that pseudocode is very helpful for this project. Pseudocode can be written in plain English or any other natural language, making it easy to read and understand for people without technical programming knowledge. This can help ensure that the program's logic and functionality are clear to all stakeholders involved in the development process. One of the challenges I faced was testing. Since I only have one thermostat and no special rooms to switch temperatures, it was not convenient to keep testing in the same room.
-
-~~~
-Pseudocode:
-The first step is to include the necessary libraries for the project, including MySQL Connector/C++, which will allow the program to interact with the database.
-Next, the program will establish a connection to the MySQL database using a username and password.
-After establishing a connection, the program will create a table in the database to store temperature and humidity readings, along with a timestamp for each reading.
-Then, the program will retrieve temperature and humidity readings from the thermostat and insert them into the MySQL database table.
-Finally, the program will close the database connection.
-Overall, this pseudocode outlines the basic steps needed to add a MySQL database to the thermostat project for better data management and analysis.
-~~~
-
-
-
-Here is an example of enchanced code in the .c file
-
-```
-void *mainThread(void *arg0)
-{
 
     // Initialize variables
     double total_energy_saved = 0;
@@ -268,40 +270,90 @@ void *mainThread(void *arg0)
         }
     }
 
-    // Print energy saved and return
-    cout << "Total energy saved: " << total_energy_saved << endl;
-    return 0;
-    /* Call driver init functions */
-    GPIO_init();
+```
 
-    /* Configure the LED and button pins */
-    GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
-    GPIO_setConfig(CONFIG_GPIO_LED_1, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
-    GPIO_setConfig(CONFIG_GPIO_BUTTON_0, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
 
-    /* Turn on user LED */
-    GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
+##  3. Database
 
-    /* Install Button callback */
-    GPIO_setCallback(CONFIG_GPIO_BUTTON_0, gpioButtonFxn0);
 
-    /* Enable interrupts */
-    GPIO_enableInt(CONFIG_GPIO_BUTTON_0);
+The thermostat has memory, but it does not include a database. The plan is to enhance the project by adding a MySQL database. The original design does not include many libraries, so additional libraries will be required to save data to the database. The temperature and humidity readings from the thermostat can be stored in a structured way in a MySQL database, with columns for the timestamp, temperature, and humidity readings. This data can be used for various purposes, such as generating charts and reports, detecting anomalies, and analyzing trends over time. This enhancement will improve data management, increase functionality, and improve the user experience.
 
-    /*
-     *  If more than one input pin is available for your device, interrupts
-     *  will be enabled on CONFIG_GPIO_BUTTON1.
-     */
-    if (CONFIG_GPIO_BUTTON_0 != CONFIG_GPIO_BUTTON_1) {
-        /* Configure BUTTON1 pin */
-        GPIO_setConfig(CONFIG_GPIO_BUTTON_1, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
 
-        /* Install Button callback */
-        GPIO_setCallback(CONFIG_GPIO_BUTTON_1, gpioButtonFxn1);
-        GPIO_enableInt(CONFIG_GPIO_BUTTON_1);
+Adding SQL database to this project will showcase my skills in data management, integration, scalability, and reliability. By adding a MySQL database, I am showcasing the ability to manage data in a structured and efficient way. I will be showing that I can create tables, insert data, and retrieve data from a database using SQL statements. Integrating a MySQL database into a project requires knowledge of various technologies, such as database management systems, APIs, and programming languages. This demonstrates the ability to work with different technologies and integrate them seamlessly into a project. A database will allow to store large amounts of data and scale the application as it grows. I will be showing an ability to design and develop applications that can handle large amounts of data and scale as needed. One of the ways to improve the enhancement is adding security level to it. This involves implementing user authentication, access control, and encryption. This helps to protect the data from unauthorized access and ensure data privacy and confidentiality.
+
+
+I have achieved the course objectives that were my goal. The updates to the outcome-coverage plans include data storage management, analytics and reporting, and integration with other systems. Since the thermostat generates a large amount of data, such as temperature and humidity readings, it is necessary to store and manage that data in a database. A database can provide a structured and organized way to store and retrieve data, making it easier to manage and analyze. With the addition of a database, complex queries and analytics can now be performed on the data, allowing for insights to be gained from it.
+
+
+One of the main things I have learned is the use of libraries for MySQL. The MySQL C++ library provides a high-level interface for connecting to the database, executing queries, and retrieving data. One difficulty that I have encountered is that storing sensitive data, such as temperature and humidity readings, in a database can raise security concerns. It is important to implement appropriate security measures, such as user authentication and access control, to ensure that the data is protected. I have learned that pseudocode is very helpful for this project. Pseudocode can be written in plain English or any other natural language, making it easy to read and understand for people without technical programming knowledge. This can help ensure that the program's logic and functionality are clear to all stakeholders involved in the development process. One of the challenges I faced was testing. Since I only have one thermostat and no special rooms to switch temperatures, it was not convenient to keep testing in the same room.
+
+
+
+~~~
+Pseudocode:
+
+
+The first step is to include the necessary libraries for the project, including MySQL Connector/C++, which will allow the program to interact with the database.
+
+
+Next, the program will establish a connection to the MySQL database using a username and password.
+
+
+After establishing a connection, the program will create a table in the database to store temperature and humidity readings, along with a timestamp for each reading.
+
+
+Then, the program will retrieve temperature and humidity readings from the thermostat and insert them into the MySQL database table.
+
+
+Finally, the program will close the database connection.
+
+
+Overall, this pseudocode outlines the basic steps needed to add a MySQL database to the thermostat project for better data management and analysis.
+~~~
+
+
+This code establishes a connection to a MySQL database, creates a table to store temperature and humidity readings, retrieves temperature and humidity readings from a thermostat, and inserts them into the database table. It uses the SQL API to connect to the database, and catches any exceptions that may occur during the execution of the program. Finally, it closes the database connection and returns 0.
+Here is an example of enchanced code in the .c file:
+
+```
+
+int main()
+{
+    // Define variables for storing temperature and humidity readings
+    float temperature, humidity;
+
+    // Establish a connection to the MySQL database
+    sql::Driver* driver;
+    sql::Connection* con;
+    sql::Statement* stmt;
+
+    try {
+        driver = get_driver_instance();
+        con = driver->connect("tcp://localhost:3306", "username", "password");
+        stmt = con->createStatement();
+
+        // Create a table in the database to store temperature and humidity readings
+        stmt->execute("CREATE TABLE IF NOT EXISTS readings(id INT NOT NULL AUTO_INCREMENT, 
+            temperature FLOAT, humidity FLOAT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+            PRIMARY KEY (id))");
+
+        // Retrieve temperature and humidity readings from the thermostat and insert them into the 
+        // MySQL database table
+        // Assume the temperature and humidity readings are obtained and stored in the variables 
+        // temperature and humidity respectively
+        string insert_query = "INSERT INTO readings (temperature, humidity) VALUES 
+            (" + to_string(temperature) + ", " + to_string(humidity) + ")";
+        stmt->execute(insert_query);
+
+        // Close the database connection
+        delete stmt;
+        delete con;
+    }
+    catch (sql::SQLException& e) {
+        cout << "SQL Error: " << e.what() << endl;
     }
 
-    return (NULL);
+    return 0;
 }
 
 ```
