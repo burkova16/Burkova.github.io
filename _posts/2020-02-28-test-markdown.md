@@ -45,6 +45,8 @@ This project from CS 350 course will demonstrate the skills I have acquires in s
 
 **5. Databases: Artifact 3**
 
+**6. Course Outcomes**
+
 
 ## 1.	Professional Self-Assessment
 For me, Computer Science has been a journey that started back in 2016 when I enrolled in a local community college and obtained an associates degree in Computer Science. However, I struggled to find employment in the field as there was little guidance on how to enter the industry. Despite this, I persevered and maintained a straight A record in my studies, although I still wasn't sure of my career aspirations. It was only after enrolling in a graduate program at SNHU that I landed a job in IT after just one semester. This semester will mark the end of my Computer Science studies, and I will be embarking on a new journey in Cybersecurity.
@@ -513,7 +515,7 @@ int main()
 ```
 
 
-## Cource Outcomes
+## 6. Course Outcomes
 
 
   Course Outcome 1 has been met through the implementation of several enhancements in the field of computer science. These enhancements include the integration of WiFi capabilities into a thermostat through software design, the development of an energy-saving algorithm through the use of algorithms and data structures, and the improvement of a MySQL database through enhanced SQL queries. By employing strategies for building collaborative environments that enable diverse audiences to support organizational decision making, these enhancements have contributed to the advancement of computer science and the creation of more efficient and effective technologies.
