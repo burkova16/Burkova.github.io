@@ -359,6 +359,19 @@ int main()
 ```
 
 
+## Cource Outcomes
+
+
+  Course Outcome 1 has been met through the implementation of several enhancements in the field of computer science. These enhancements include the integration of WiFi capabilities into a thermostat through software design, the development of an energy-saving algorithm through the use of algorithms and data structures, and the improvement of a MySQL database through enhanced SQL queries. By employing strategies for building collaborative environments that enable diverse audiences to support organizational decision making, these enhancements have contributed to the advancement of computer science and the creation of more efficient and effective technologies.
+  
+  As a result of completing enhancements in software design, algorithms and data structures, and databases, I was able to design, develop, and deliver professional-quality oral, written, and visual communications that were technically sound, coherent, and adapted to specific audiences and contexts. These enhancements enabled me to effectively communicate the features and benefits of the enhanced wifi into the thermostat, the improved energy saving algorithm, and the enhanced SQL database to diverse audiences in various contexts. The ability to communicate technical information clearly and effectively is crucial in the field of computer science, and the enhancements I completed helped me to develop and refine this skill.
+  
+  By enhancing the wifi into thermostat, improving the energy saving algorithm, and enhancing the SQL database, I was able to design and evaluate computing solutions that solved specific problems. The improvements made to the thermostat ensured that it could efficiently connect to wifi networks, while the enhancements to the energy saving algorithm ensured that it was more effective at reducing energy consumption. Additionally, the enhancements made to the SQL database improved its ability to store and manage data related to temperature and humidity readings. These improvements allowed me to manage the trade-offs involved in design choices and create computing solutions that were coherent, technically sound, and appropriate for specific audiences and contexts.
+  
+  By enhancing the wifi functionality of the thermostat, improving the energy-saving algorithm, and enhancing the SQL database, I have demonstrated an ability to use innovative techniques, skills, and tools in computing practices. These enhancements have helped in implementing computer solutions that deliver value and accomplish industry-specific goals. The ability to identify and implement improvements in computer systems using well-founded techniques and tools is an essential skill in the field of computer science, and it is critical to the success of any project or initiative.
+  
+  The enhancements completed to develop a security mindset include enhancing the WiFi connection in the thermostat, enhancing the energy-saving algorithm, and enhancing the SQL database. These enhancements incorporate secure coding practices, such as preventing SQL injection attacks, protecting against unauthorized access to the system, and ensuring secure data transmission. Additionally, the algorithmic enhancements incorporate secure design principles, such as reducing attack surfaces and enforcing access controls. By incorporating security measures into software architecture and designs, potential vulnerabilities can be exposed and mitigated, ensuring the privacy and enhanced security of data and resources.
+
 
 ## Boxes
 You can add notification, warning and error boxes like this:
