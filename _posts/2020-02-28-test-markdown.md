@@ -73,6 +73,160 @@ One code review practice that I believe is not very common is to include end-use
 Ghani, U. (2022, February 3). 5 code review best practices. Work Life by Atlassian. Retrieved March 11, 2023, from https://www.atlassian.com/blog/add-ons/code-review-best-practices 
 Makarychev, K., Volokh, K., & Yermakov, S. (2016). Involving end-users in code review. In Proceedings of the 10th International Conference on Software Engineering and Applications (pp. 11-16).
 
+Original code before enhancements.
+
+```
+/*
+ *  ======== gpiointerrupt.c ========
+ */
+#include <stdint.h>
+#include <stddef.h>
+
+/* Driver Header files */
+#include <ti/drivers/GPIO.h>
+#include <ti/drivers/Timer.h>
+
+/* Driver configuration */
+#include "ti_drivers_config.h"
+
+#define DOT_DURATION 500000 // 500ms
+#define DASH_DURATION 1500000 // 1500ms
+#define CHAR_GAP_DURATION (3 * DOT_DURATION) // 3*500ms
+#define WORD_GAP_DURATION (7 * DOT_DURATION) // 7*500ms
+
+
+void timerCallback(Timer_Handle myHandle, int_fast16_t status) {
+
+
+   switch (currentState) {
+            case DOT:
+                if (sosCount < 3) {
+                GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
+                } else {
+                    GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_ON);
+                }
+                currentState = PAUSE_BETWEEN_CHARACTERS;
+                break;
+            case DASH:
+                GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_ON);
+                currentState = PAUSE_BETWEEN_CHARACTERS;
+                break;
+
+            case PAUSE_BETWEEN_CHARACTERS:
+                GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
+                GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
+                if (sosCount < 3) {
+                    currentState = DOT;
+                    sosCount++;
+                } else {
+                    currentState = PAUSE_BETWEEN_WORDS;
+                    sosCount = 0;
+                }
+                break;
+
+            case PAUSE_BETWEEN_WORDS:
+                GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
+                GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
+                currentState = DOT;
+                break;
+
+            case SOS:
+                GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
+                GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
+                currentState = DOT;
+                sosCount = 0;
+                break;
+        }
+}
+
+
+void initTimer(void) {
+    Timer_Handle timer0;
+    Timer_Params params;
+    Timer_init();
+    Timer_Params_init(&params);
+    params.period = 1000000;
+    params.periodUnits = Timer_PERIOD_US;
+    params.timerMode = Timer_CONTINUOUS_CALLBACK;
+    params.timerCallback = timerCallback;
+
+    timer0 = Timer_open(CONFIG_TIMER_0, &params);
+    if (timer0 == NULL) {
+            /* Failed to initialized timer */
+            while (1) {}
+ }
+
+ if (Timer_start(timer0) == Timer_STATUS_ERROR) {
+     /* Failed to start timer */
+     while (1) {}
+}
+}
+/*
+ *  ======== gpioButtonFxn0 ========
+ *  Callback function for the GPIO interrupt on CONFIG_GPIO_BUTTON_0.
+ *
+ *  Note: GPIO interrupts are cleared prior to invoking callbacks.
+ */
+void gpioButtonFxn0(uint_least8_t index)
+{
+    /* Toggle an LED */
+    GPIO_toggle(CONFIG_GPIO_LED_0);
+}
+
+/*
+ *  ======== gpioButtonFxn1 ========
+ *  Callback function for the GPIO interrupt on CONFIG_GPIO_BUTTON_1.
+ *  This may not be used for all boards.
+ *
+ *  Note: GPIO interrupts are cleared prior to invoking callbacks.
+ */
+void gpioButtonFxn1(uint_least8_t index)
+{
+    /* Toggle an LED */
+    GPIO_toggle(CONFIG_GPIO_LED_1);
+}
+
+/*
+ *  ======== mainThread ========
+ */
+void *mainThread(void *arg0)
+{
+    /* Call driver init functions */
+    GPIO_init();
+
+    /* Configure the LED and button pins */
+    GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
+    GPIO_setConfig(CONFIG_GPIO_LED_1, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
+    GPIO_setConfig(CONFIG_GPIO_BUTTON_0, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
+
+    /* Turn on user LED */
+    GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
+
+    /* Install Button callback */
+    GPIO_setCallback(CONFIG_GPIO_BUTTON_0, gpioButtonFxn0);
+
+    /* Enable interrupts */
+    GPIO_enableInt(CONFIG_GPIO_BUTTON_0);
+
+    /*
+     *  If more than one input pin is available for your device, interrupts
+     *  will be enabled on CONFIG_GPIO_BUTTON1.
+     */
+    if (CONFIG_GPIO_BUTTON_0 != CONFIG_GPIO_BUTTON_1) {
+        /* Configure BUTTON1 pin */
+        GPIO_setConfig(CONFIG_GPIO_BUTTON_1, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
+
+        /* Install Button callback */
+        GPIO_setCallback(CONFIG_GPIO_BUTTON_1, gpioButtonFxn1);
+        GPIO_enableInt(CONFIG_GPIO_BUTTON_1);
+    }
+
+    return (NULL);
+}
+
+
+```
+
 
 ## Software design, Algorithms and Data Structures, Database
 
